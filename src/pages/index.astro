@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import BenefitItem from '../components/BenefitItem.astro';
-import SubscribeForm from '../components/SubscribeForm.astro';
+import SubscribeForm from '../components/subscribe_form/SubscribeForm.astro';
 ---
 
 <Layout title="SomoBytes - Level Up Your Coding Skills">
@@ -68,9 +68,8 @@ import SubscribeForm from '../components/SubscribeForm.astro';
 </Layout>
 
 <script>
-  import { createIcons, Youtube, Mail, ArrowRight } from 'lucide';
+import { createIcons, Youtube, Mail, ArrowRight } from 'lucide';
 
-  // Initialize Lucide icons
   createIcons({
     icons: {
       Youtube,
@@ -78,31 +77,4 @@ import SubscribeForm from '../components/SubscribeForm.astro';
       ArrowRight
     }
   });
-
-  document.getElementById('subscribe-form').addEventListener('submit', async function(e) {
-    e.preventDefault();
-    const email = document.getElementById('email').value;
-    
-    try {
-      const response = await fetch('/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        alert('Thank you for subscribing!');
-        document.getElementById('email').value = '';
-      } else {
-        alert(`Oops! ${data.message}`);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again later.');
-    }
-  });
-</script>/script>/script>
+</script>

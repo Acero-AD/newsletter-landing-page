@@ -11,21 +11,29 @@ import SubscribeForm from '../components/subscribe_form/SubscribeForm.astro';
     <Header />
     
     <main class="flex-1 flex items-center justify-center py-12 px-4">
-      <div class="container max-w-6xl mx-auto">
+      <div class="container max-w-10xl mx-auto">
         <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
           <div class="flex flex-col justify-center space-y-4">
             <div class="space-y-3">
-              <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                Level Up Your Coding Skills with SomosBytes
+              <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">  
+                Sube de nivel y deja de llorar con lo de siempre.
               </h1>
               <p class="max-w-[600px] text-purple-100 md:text-xl">
-                Dive into engaging tutorials, expert tips, and the latest in software engineering. Join our community of passionate developers!
+                Atento, porque esto <b>te interesa</b>.
+              </p>
+              <p class="max-w-[600px] text-purple-100 md:text-xl">
+                No más tutoriales aburridos ni teorías sin fin. Aquí vas a encontrar lo que de verdad te importa:
+                trucos que funcionan, consejos de los que saben y lo último en desarrollo de software. ¿Lo mejor?
+              </p>
+              <p class="max-w-[600px] text-purple-100 md:text-xl">
+                Unete, <b>letter que se pierde... no vuelve</b>.
+                <br/> Estamos esperando a alguien como tú.
               </p>
             </div>
             <div class="w-full max-w-sm space-y-2">
               <SubscribeForm />
               <p class="text-sm text-purple-100">
-                Join 10,000+ developers already leveling up!
+                Ya somos muchos Bytes en la Matrix.
               </p>
             </div>
           </div>
@@ -39,24 +47,24 @@ import SubscribeForm from '../components/subscribe_form/SubscribeForm.astro';
 
     <section class="w-full py-12 md:py-24 lg:py-32 bg-white/10">
       <div class="container max-w-6xl mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-8">Why Join SomoBytes?</h2>
+        <h2 class="text-3xl font-bold text-center mb-8">Por que unirte a SomoBytes?</h2>
         <div class="grid gap-6 md:grid-cols-3">
           <BenefitItem
             icon="youtube"
-            title="Weekly Tutorials"
-            description="Fresh content every week to keep you up-to-date with the latest tech trends."
+            title="Contenido semanal"
+            description="Contenido semanal para dejes de ser un NPC mas."
             iconColor="text-yellow-300"
           />
           <BenefitItem
             icon="mail"
-            title="Exclusive Newsletter"
-            description="Get insider tips and tricks directly in your inbox."
+            title="Newsletter"
+            description="Emails con contenido exclusivo donde aprenderas de mis mayores cagadas."
             iconColor="text-green-300"
           />
           <BenefitItem
             icon="arrow-right"
-            title="Career Growth"
-            description="Learn skills that will propel your software engineering career forward."
+            title="Crecimiento continuo"
+            description="Vendete más y mejor, no todo son bytes."
             iconColor="text-blue-300"
           />
         </div>

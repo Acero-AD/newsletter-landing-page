@@ -14,7 +14,7 @@ function showSnackbar(message: string, type: 'success' | 'error') {
     fixed top-5 left-1/2 transform
     transform -translate-x-1/2 min-w-[250px] p-4 rounded-md
     text-white text-center transition-opacity duration-300 ${
-      type === 'success' ? 'bg-green-500' : 'bg-red-500'
+      type === 'success' ? 'bg-black/50' : 'bg-red-300'
     }`;
 
   snackbar.classList.remove('hidden', 'opacity-0');
@@ -60,15 +60,15 @@ function handleSubscription(e: Event): void {
   subscribeUser(email)
     .then(data => {
       if (data.success) {
-        showSnackbar('Thanks for subscribing!', 'success');
+        showSnackbar('Bienvenido a la comunidad!', 'success');
         emailField.value = ''; // Clear the email field
       } else {
-        showSnackbar('An error occurred while subscribing', 'error');
+        showSnackbar('Oh Oh.., algo ha ido mal', 'error');
       }
     })
     .catch(error => {
       console.error('Error:', error);
-      showSnackbar('An error occurred while subscribing', 'error');
+      showSnackbar('Oh Oh.., algo ha ido mal', 'error');
     });
 }
 

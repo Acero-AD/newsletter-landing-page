@@ -29,6 +29,7 @@ jobs:
             export NVM_DIR=/home/${{ secrets.USERNAME }}/.nvm
             source $NVM_DIR/nvm.sh
             cd /home/${{ secrets.USERNAME }}/htdocs/${{ secrets.HOST }}/
+            git stash
             git pull origin master
             npm install
             npm run build
